@@ -1,7 +1,7 @@
 {
-  "short_name": "Boilerplate",
-  "name": "Boilerplate react ts",
-  "start_url": "/home",
+  "short_name": "Js",
+  "name": "Js pressure test",
+  "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
