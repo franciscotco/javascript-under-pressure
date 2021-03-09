@@ -29,7 +29,9 @@ export interface ITheme {
 		gray_medium: string,
 		gray_dark: string,
 		blue_background: string,
-		blue_dark: string
+		blue_dark: string,
+		error: string,
+		success: string
 	}
 }
 
@@ -58,7 +60,9 @@ export const THEME: ITheme = {
 		gray_medium: '#eaeaea',
 		gray_dark: '#555555',
 		blue_background: '#f9f9f9',
-		blue_dark: '#194553'
+		blue_dark: '#194553',
+		error: '#DB4736',
+		success: '#5FA052'
 	}
 
 };
