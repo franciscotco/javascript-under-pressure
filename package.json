@@ -11,8 +11,7 @@
     "deploy": "serve -s build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6006",
-    "js": "webpack serve --mode development"
+    "storybook": "start-storybook -p 6006"
   },
   "husky": {
     "hooks": {
