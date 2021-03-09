@@ -3,19 +3,20 @@ import React from 'react';
 
 // Styles
 import {
-	Button as Root, typeSizeButton
+	Button as Root, typeSizeButton, typeStatusButton
 } from './styles';
 
 interface IProps {
 	label: string,
 	size: typeSizeButton,
+	status: typeStatusButton,
 	onClick?: () => void
 }
 
-function Button ({ size, label, onClick }: IProps) {
+function Button ({ status, size, label, onClick }: IProps) {
 
 	return (
-		<Root onClick={onClick} size={size} >
+		<Root status={status} onClick={onClick} size={size} >
 			{label}
 		</Root>
 	);
@@ -23,7 +24,8 @@ function Button ({ size, label, onClick }: IProps) {
 }
 
 Button.defaultProps = {
-	size: 'small'
+	size: 'small',
+	status: 'pristine'
 };
 
 export default Button;

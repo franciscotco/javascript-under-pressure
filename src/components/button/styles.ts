@@ -2,7 +2,8 @@
 import styled, { css } from 'styled-components';
 
 export type typeSizeButton = 'small' | 'big';
-export const Button = styled.button<{ size: typeSizeButton }>`
+export type typeStatusButton = 'pristine' | 'error' | 'valid';
+export const Button = styled.button<{ size: typeSizeButton, status: typeStatusButton }>`
 	border: none;
 
 	padding: 0 2rem;
@@ -24,7 +25,27 @@ export const Button = styled.button<{ size: typeSizeButton }>`
 	}}
 
 	cursor: pointer;
-	color: ${({ theme }) => theme.color.blue_dark};
+	color: ${({ theme, status }) => {
+		switch(status) {
+			case 'valid':
+				return theme.color.success;
+			case 'error':
+				return theme.color.error;
+			case 'pristine':
+			default:
+				return theme.color.blue_dark;
+		}
+	}};
 	background-color: ${({ theme }) => theme.color.gray_lighter};
-	border: 1px solid ${({ theme }) => theme.color.gray_medium};
+	border: 1px solid ${({ theme, status }) => {
+		switch(status) {
+			case 'valid':
+				return theme.color.success;
+			case 'error':
+				return theme.color.error;
+			case 'pristine':
+			default:
+				return theme.color.gray_medium;
+		}
+	}};
 `;
