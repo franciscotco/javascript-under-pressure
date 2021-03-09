@@ -2,7 +2,7 @@ const ADD = 'add';
 
 export default {
 	id: 'addition',
-	position: 0,
+	order: 0,
 	template: `
 function ${ADD} (a, b) {
 

@@ -5,7 +5,7 @@ import Multiplication from './multiplication';
 interface ITest {
 	id: string,
 	template: string,
-	position: number,
+	order: number,
 	tests: ((value: string) => boolean)[]
 }
 
@@ -16,6 +16,6 @@ export function compute (value: string, test: ITest) {
 const JAVASCRIPT_TESTS: ITest[] = [
 	Addition,
 	Multiplication
-];
+].sort((a, b) => a.order - b.order);
 
 export default JAVASCRIPT_TESTS;

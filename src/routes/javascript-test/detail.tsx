@@ -57,7 +57,7 @@ function Detail ({ basePath }: IProps) {
 				<React.Fragment>
 					{has_next ? (
 						<Link to={`${basePath}/detail/${JAVASCRIPT_TESTS[index + 1].id}`}>
-							<Button size="big" label={intl.formatMessage({ id: 'ROUTES.JAVASCRIPT_TEST.DETAIL.NEXT' })} />
+							<Button status= "valid" size="big" label={intl.formatMessage({ id: 'ROUTES.JAVASCRIPT_TEST.DETAIL.NEXT' })} />
 						</Link>
 					) : (
 						<Link to={`${basePath}/end`}>
@@ -70,6 +70,7 @@ function Detail ({ basePath }: IProps) {
 					{computed ? (
 						<Button
 							size="big"
+							status="error"
 							onClick={handleOnClick}
 							label={intl.formatMessage({ id: 'ROUTES.JAVASCRIPT_TEST.DETAIL.ERROR' })}
 						/>

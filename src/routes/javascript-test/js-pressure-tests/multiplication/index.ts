@@ -2,7 +2,7 @@ const MULT = 'mult';
 
 export default {
 	id: 'multiplication',
-	position: 1,
+	order: 1,
 	template: `
 function ${MULT} (a, b) {
 
